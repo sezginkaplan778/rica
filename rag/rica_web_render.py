@@ -151,7 +151,7 @@ if __name__ == "__main__":
     port = int(os.environ.get("PORT", 8000))
 
     print(f"🚀 Starting RICA backend on port {port}")
-    print("💡 When deployed on Render, it will be available at https://rica-backend.onrender.com")
+    print("💡 When deployed on Render, it will be available at https://rica_web_render.onrender.com")
 
     uvicorn.run("rica_web_render:app", host="0.0.0.0", port=port, reload=False)
 
