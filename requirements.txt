@@ -3,7 +3,7 @@ langchain==0.2.14
 langchain-core
 langchain-community==0.2.11
 langchain-chroma==0.1.4
-langchain-openai==0.1.6
+langchain-openai
 
 # === Server / routing ===
 langserve==0.3.1
