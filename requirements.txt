@@ -1,18 +1,18 @@
-beautifulsoup4
-langchain
-langgraph
-langchainhub
-langchain-community
-tavily-python
-langchain-chroma
-python-dotenv
-pytest
-langchain-openai
-bs4
-firecrawl-py 
-fastapi
-langserve
-sse_starlette
-pydantic
-httpx
+beautifulsoup4==4.12.3
+langchain==0.2.9
+langgraph==0.1.8
+langchainhub==0.1.20
+langchain-community==0.3.27
+tavily-python==0.3.4
+langchain-chroma==0.1.2
+python-dotenv==1.0.1
+pytest==8.2.2
+langchain-openai==0.1.16
+bs4==0.0.2
+firecrawl-py ==0.0.13
+fastapi==0.111.1
+langserve==0.2.2
+sse_starlette==2.1.2
+pydantic==1.10.13
+httpx==0.27.0
 
