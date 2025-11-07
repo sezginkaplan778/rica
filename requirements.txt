@@ -9,14 +9,16 @@ langchain==0.2.16
 langchain-core==0.2.41
 langchain-community==0.2.16
 langchain-openai==0.1.16
-openai>=1.30.0,<2.0.0
+openai==1.51.0
 
 # Vector store backend
 chromadb==0.5.4
 
-# LangServe (optional /chain)
+# LangServe (+httpx/httpcore pins fix VerifyTypes import)
 langserve==0.2.2
 sse-starlette==2.1.2
+httpx==0.28.1
+httpcore==1.0.5
 
-# Avoid NumPy 2.x surprises on some platforms
+# Avoid NumPy 2.x surprises
 numpy<2
