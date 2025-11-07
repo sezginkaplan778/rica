@@ -1,25 +1,22 @@
-# === Core LangChain packages ===
-langchain==0.2.9
-langserve
-httpx
-langchain-community==0.2.11
-langchain-chroma==0.1.4
-langchain-openai
 
-# === Server / routing ===
-
-fastapi==0.115.0
-uvicorn==0.30.1
-
-# === Utilities ===
 python-dotenv==1.0.1
-tiktoken==0.8.0
-pydantic==2.9.2
+fastapi==0.111.1
+uvicorn[standard]==0.30.3
+pydantic>=2.4,<3
 
+# LangChain stack (versions aligned with your imports)
+langchain==0.2.9
+langchain-core==0.2.43
+langchain-community==0.2.16
+langchain-openai==0.1.16
+openai>=1.30.0,<2.0.0
 
-# === Optional (for stability) ===
-aiohttp==3.10.5
+# Vector store backend
+chromadb==0.5.4
 
-beautifulsoup4==4.12.3
-bs4==0.0.2
-sse_starlette==2.1.2
+# LangServe (for /chain route)
+langserve==0.2.2
+sse-starlette==2.1.2
+
+# Avoid NumPy 2.x issues in some environments
+numpy<2
