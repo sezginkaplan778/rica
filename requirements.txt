@@ -1,6 +1,5 @@
 # === Core LangChain packages ===
 langchain==0.2.14
-langchain-core
 langchain-community==0.2.11
 langchain-chroma==0.1.4
 langchain-openai
@@ -19,3 +18,6 @@ httpx==0.28.1
 # === Optional (for stability) ===
 aiohttp==3.10.5
 
+beautifulsoup4==4.12.3
+bs4==0.0.2
+sse_starlette==2.1.2
