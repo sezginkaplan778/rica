@@ -1,7 +1,7 @@
 import os
 from dotenv import load_dotenv
 from fastapi import FastAPI, Request
-from pydantic import BaseModel
+from pydantic import BaseModel, ConfigDict
 from fastapi.middleware.cors import CORSMiddleware
 
 from langchain_community.vectorstores import Chroma
@@ -102,8 +102,11 @@ def conversational_rag(input_text: str):
     return {"answer": answer}
 
 # === Input / Output Schemas ===
+
 class ChatInput(BaseModel):
-    input: str  # only input text (no chat_history shown!)
+    message: str
+    class Config:
+        arbitrary_types_allowed = True
 
 class ChatOutput(BaseModel):
     answer: str
