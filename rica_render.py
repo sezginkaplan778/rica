@@ -13,7 +13,7 @@ from langchain_core.prompts import ChatPromptTemplate, MessagesPlaceholder
 from langchain_core.messages import HumanMessage, SystemMessage, AIMessage
 from langchain_core.runnables import RunnableLambda
 from langchain.memory import ConversationBufferMemory
-from langserve import add_routes
+#from langserve import add_routes
 
 # === Load environment variables ===
 load_dotenv()
@@ -137,14 +137,7 @@ async def chat_endpoint(request: Request):
         return {"response": f"Error: {str(e)}"}
 
 # === Add LangServe Route ===
-add_routes(
-    app,
-    RunnableLambda(lambda x: conversational_rag(x["input"])["answer"]).with_types(
-        input_type=ChatInput,
-        output_type=str
-    ),
-    path="/chain",
-)
+
 
 if __name__ == "__main__":
     import uvicorn
@@ -154,7 +147,8 @@ if __name__ == "__main__":
     port = int(os.environ.get("PORT", 8000))
 
     print(f"🚀 Starting RICA backend on port {port}")
-    print("💡 When deployed on Render, it will be available at https://rica_web_render.onrender.com")
+    print("💡 When deployed on Render, it will be available at https://rica-v45l.onrender.com")
 
-    uvicorn.run("rica_web_render:app", host="0.0.0.0", port=port, reload=False)
+    uvicorn.run(app, host="0.0.0.0", port=port)
 
+    
