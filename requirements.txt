@@ -5,7 +5,7 @@ langchain-chroma==0.1.4
 langchain-openai
 
 # === Server / routing ===
-langserve==0.3.1
+langserve
 fastapi==0.115.0
 uvicorn==0.30.1
 
