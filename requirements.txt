@@ -14,10 +14,8 @@ openai==1.51.0
 # Vector store backend
 chromadb==0.5.4
 
-# LangServe (+httpx/httpcore pins fix VerifyTypes import)
+# LangServe (optional /chain)
 
-httpx==0.28.1
-httpcore==1.0.5
 
-# Avoid NumPy 2.x surprises
+# Prevent NumPy 2.x surprises on some platforms
 numpy<2
