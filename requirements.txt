@@ -1,6 +1,6 @@
 # === Core LangChain packages ===
 langchain==0.2.9
-langserve==0.2.2
+langserve
 httpx
 langchain-community==0.2.11
 langchain-chroma==0.1.4
