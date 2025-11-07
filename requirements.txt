@@ -1,12 +1,12 @@
-
 python-dotenv==1.0.1
 fastapi==0.111.1
 uvicorn[standard]==0.30.3
 pydantic>=2.4,<3
+typing-extensions>=4.8,<5
 
-# LangChain stack (versions aligned with your imports)
-langchain==0.2.9
-langchain-core==0.2.43
+# LangChain stack (aligned)
+langchain==0.2.16
+langchain-core==0.2.41
 langchain-community==0.2.16
 langchain-openai==0.1.16
 openai>=1.30.0,<2.0.0
@@ -14,9 +14,9 @@ openai>=1.30.0,<2.0.0
 # Vector store backend
 chromadb==0.5.4
 
-# LangServe (for /chain route)
+# LangServe (optional /chain)
 langserve==0.2.2
 sse-starlette==2.1.2
 
-# Avoid NumPy 2.x issues in some environments
+# Avoid NumPy 2.x surprises on some platforms
 numpy<2
